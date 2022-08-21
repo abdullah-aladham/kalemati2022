@@ -1,5 +1,7 @@
 package com.abdullah_aladham.kalemati.Model;
 
+import com.abdullah_aladham.kalemati.Enums.GenderEnum;
+
 import jakarta.persistence.*;
 
 //import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
@@ -13,8 +15,8 @@ private Long id;
 private String name;
 	@Column(nullable=false)
 private float age;
-//	@Column(nullable=false)
-//private GenderEnum gender;//enum
+	@Column(nullable=false)
+private GenderEnum gender;//enum
 	@Column(nullable=false)
 private String ChildCode;
 	@Column(nullable=false)

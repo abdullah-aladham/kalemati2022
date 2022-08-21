@@ -1,6 +1,6 @@
 package com.abdullah_aladham.kalemati.Model;
 
-import com.abdullah_aladham.Kalemati21.Security.ApplicationUserRole;
+import com.abdullah_aladham.kalemati.Security.ApplicationUserRole;
 
 public class Admin {
 	private Long Id;

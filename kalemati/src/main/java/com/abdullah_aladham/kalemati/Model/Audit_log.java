@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 
 
-//import com.abdullah_aladham.Kalemati21.Security.ApplicationUserRole;
+import com.abdullah_aladham.kalemati.Security.ApplicationUserRole;
 
 public class Audit_log {
 	@Id
