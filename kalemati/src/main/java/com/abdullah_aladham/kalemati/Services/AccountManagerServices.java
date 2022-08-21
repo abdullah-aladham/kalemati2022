@@ -1,5 +1,9 @@
 package com.abdullah_aladham.kalemati.Services;
 
-public class AccountManagerServices {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.abdullah_aladham.kalemati.Model.Cards;
+
+public class AccountManagerServices  {
 
 }

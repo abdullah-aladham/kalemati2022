@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.abdullah_aladham.kalemati.Model.Patients;
 public interface PatientRepo extends JpaRepository<Patients,Long>{
+	public boolean DeleteChild(Long id);
+//public boolean	isdeleted(boolean deleted);
 //	void deleteCustomerById(Long id);
 
 //	Optional<School>  findSchoolById(Long id);

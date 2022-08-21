@@ -6,9 +6,9 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.abdullah_aladham.Kalemati21.Exceptions.SubscriptionNotFoundException;
-import com.abdullah_aladham.Kalemati21.Model.Subscriptions;
-import com.abdullah_aladham.Kalemati21.Repo.SubscriptionRepo;
+import com.abdullah_aladham.kalemati.Exceptions.SubscriptionNotFoundException;
+import com.abdullah_aladham.kalemati.Model.Subscriptions;
+import com.abdullah_aladham.kalemati.Repo.SubscriptionRepo;
 
 
 @Service

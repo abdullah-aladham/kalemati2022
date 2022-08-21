@@ -17,11 +17,19 @@ public class Teacher {
 	private String email;//teacher email
 	@Column(nullable=false)
 	private String major;//teacher major
+	@Column(nullable=false)
+	private String TeacherCode;
 //	@Column(nullable=false)
 //    private School school;
 	
 	
 	
+	public String getTeacherCode() {
+		return TeacherCode;
+	}
+	public void setTeacherCode(String teacherCode) {
+		TeacherCode = teacherCode;
+	}
 	public Teacher() {
 		
 	}

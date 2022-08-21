@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 //import com.abdullah_aladham.Kalemati21.Model.Customer;
-import com.abdullah_aladham.Kalemati21.Model.School;
+import com.abdullah_aladham.kalemati.Model.School;
 
 
 @Repository
