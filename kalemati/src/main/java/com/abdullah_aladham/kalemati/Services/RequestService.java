@@ -30,7 +30,12 @@ public Requests addRequest(Requests req) {
 public List<Requests> findallRequests(){
 	return reqRepo.findAll();
 }
-
+public List<Requests> findRequstsById(Long id){
+	return reqRepo.getRequstsById(id);
+}
+public Requests updateRequest(Requests req) {
+	return reqRepo.save(req);
+}
 
 	
 }

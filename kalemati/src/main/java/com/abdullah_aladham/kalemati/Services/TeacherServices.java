@@ -27,13 +27,13 @@ public Teacher addTeacher(Teacher teacher) {
 	teacher.setTeacherCode(UUID.randomUUID().toString());
 	return teacherRepo.save(teacher);
 }
-public List<Teacher> findAllCards(){
+public List<Teacher> findAllTeachers(){
 	return teacherRepo.findAll();
 }
-public Teacher findCardById(long id) {
-	return teacherRepo.findTeacherById(id).orElseThrow(()->new TeacherNotFoundException("the Teacher  that you looking for is not found"));
+public List<Teacher> findTeacherById(long id) {
+	return (List<Teacher>) teacherRepo.findTeacherById(id).orElseThrow(()->new TeacherNotFoundException("the Teacher  that you looking for is not found"));
 }
-public Teacher UpdateCard(Teacher teacher) {
+public Teacher UpdateTeacher(Teacher teacher) {
 return	teacherRepo.save(teacher);
 }
 public void DeleteTeacher(Long id) {

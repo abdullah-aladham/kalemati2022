@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,26 +39,26 @@ public class SubResources {
 	@GetMapping("/find/{id}")
 	public ResponseEntity<Subscriptions> getSubById(@PathVariable("id")Long id){
 		Subscriptions sub =subService. findSubscriptionById(id);
-		return new ResponseEntity<>(sub, HttpStatus.OK);
+	return new ResponseEntity<>(sub, HttpStatus.OK);
 	}
 
-	//@PostMapping("/add")
-	/*public ResponseEntity<Subscriptions> addSub(@RequestBody Subscriptions sub){
+	@PostMapping("/add")
+	public ResponseEntity<Subscriptions> addSub(@RequestBody Subscriptions sub){
 		Subscriptions newSub =subService.addsub(sub);
 		return new ResponseEntity<>(newSub,HttpStatus.CREATED);
 		
-	}*/
+	}
 	@PutMapping("/update")
 	public ResponseEntity<Subscriptions> updateCustomer(@RequestBody  Subscriptions sub){
 		Subscriptions updateSub = subService. updateSubscription(sub);
 		return new ResponseEntity<>(updateSub,HttpStatus.OK);
 		
 	}
-//	@DeleteMapping("/delete/{id}")
-//	public ResponseEntity<?> deleteSub(@PathVariable("id")Long id){
-//		subService.  DeleteSub(id);
-//		return new ResponseEntity<>(HttpStatus.OK);
-//		
-//	}
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<?> deleteSub(@PathVariable("id")Long id){
+		subService.  DeleteSub(id);
+		return new ResponseEntity<>(HttpStatus.OK);
+		
+	}
 	
 }

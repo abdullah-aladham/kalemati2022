@@ -31,6 +31,10 @@ public ResponseEntity<List<Requests>> getAllRequests(){
 	List<Requests> req =reqService.findallRequests();
 	return new ResponseEntity<>(req, HttpStatus.OK);
 }
+@GetMapping("/all/{id}")
+public ResponseEntity<List<Requests>> getRequestsById(Long id){
+	List res =reqService.
+}
 
 @PostMapping("/add")
 public ResponseEntity<Requests> addRequest(@RequestBody Requests req){
@@ -38,6 +42,13 @@ public ResponseEntity<Requests> addRequest(@RequestBody Requests req){
 	return new ResponseEntity<>(newReq,HttpStatus.CREATED);
 	
 }
+@PostMapping("/update")
+public ResponseEntity<Requests> updateRequest(@RequestBody Requests req){
+	Requests updatedReq =reqService.updateRequest(req);
+	return new ResponseEntity<>(updatedReq,HttpStatus.CREATED);
+	
+}
+
 
 
 }
