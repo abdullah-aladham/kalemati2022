@@ -1,10 +1,14 @@
 package com.abdullah_aladham.kalemati.Repo;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.abdullah_aladham.kalemati.Model.Patients;
 public interface PatientRepo extends JpaRepository<Patients,Long>{
-	public boolean DeleteChild(Long id);
+	public boolean DeleteChildById(Long id);
+	public Optional<Patients> findPatientsById(Long id);
 //public boolean	isdeleted(boolean deleted);
 //	void deleteCustomerById(Long id);
 

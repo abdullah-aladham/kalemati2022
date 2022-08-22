@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //import com.abdullah_aladham.Kalemati21.Model.Child;
 import com.abdullah_aladham.kalemati.Model.Requests;
+import com.abdullah_aladham.kalemati.Model.Teacher;
 //import com.abdullah_aladham.Kalemati21.Model.School;
 import com.abdullah_aladham.kalemati.Services.RequestService;
 @RestController
@@ -33,7 +36,8 @@ public ResponseEntity<List<Requests>> getAllRequests(){
 }
 @GetMapping("/all/{id}")
 public ResponseEntity<List<Requests>> getRequestsById(Long id){
-	List res =reqService.
+	List<Requests> res =reqService.findRequstsById(id);
+	return new ResponseEntity<>(res,HttpStatus.OK);
 }
 
 @PostMapping("/add")
@@ -48,7 +52,11 @@ public ResponseEntity<Requests> updateRequest(@RequestBody Requests req){
 	return new ResponseEntity<>(updatedReq,HttpStatus.CREATED);
 	
 }
-
+@DeleteMapping("/delete")
+public ResponseEntity<Requests>deleteTeacher(@PathVariable("id")Long id){
+	reqService.deleteReq(id);
+	return new ResponseEntity(HttpStatus.OK);
+}
 
 
 }

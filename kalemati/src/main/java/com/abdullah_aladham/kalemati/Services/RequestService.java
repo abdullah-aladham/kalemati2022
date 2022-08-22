@@ -31,11 +31,13 @@ public List<Requests> findallRequests(){
 	return reqRepo.findAll();
 }
 public List<Requests> findRequstsById(Long id){
-	return reqRepo.getRequstsById(id);
+	return reqRepo.getRequestById(id);
 }
 public Requests updateRequest(Requests req) {
 	return reqRepo.save(req);
 }
-
+public void deleteReq(Long id) {
+	reqRepo.deleteRequest(id);
+}
 	
 }

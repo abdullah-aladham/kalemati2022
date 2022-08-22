@@ -37,11 +37,11 @@ public ResponseEntity<List<Patients>> getAllChildren(){
 }
 
 //
-//@GetMapping("/find/{id}")
-//public ResponseEntity<Patients> getChildById(@PathVariable("id")Long id){
-//	Patients child =childService. findChildById(id);
-//	return new ResponseEntity<>(child, HttpStatus.OK);
-//}
+@GetMapping("/find/{id}")
+public ResponseEntity<Patients> getChildById(@PathVariable("id")Long id){
+	Patients child =childService. findChildById(id);
+	return new ResponseEntity<>(child, HttpStatus.OK);
+}
 
 @PostMapping("/add")
 public ResponseEntity<Patients> addChild(@RequestBody Patients child){
@@ -55,10 +55,10 @@ public ResponseEntity<Patients> updateChild(@RequestBody Patients child){
 	return new ResponseEntity<>(updateChild,HttpStatus.OK);
 	
 }
-//@DeleteMapping("/delete/{id}")
-//public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
-//	childService. DeleteChild(id);
-//	return new ResponseEntity<>(HttpStatus.OK);
-//	
-//}
+@DeleteMapping("/delete/{id}")
+public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
+	childService. DeleteChild(id);
+	return new ResponseEntity<>(HttpStatus.OK);
+	
+}
 }

@@ -30,9 +30,9 @@ public class PatientsService {
 		return childRepo.findAll();
 	}
 
-//	public Patients findChildById(Long id) {
-//	return  childRepo.findChildById(id).orElseThrow(()->new ChildNotFoundException("The user id"+id+" is not found"));	
-//	}
+	public Patients findChildById(Long id) {
+	return  childRepo.findPatientsById(id).orElseThrow(()->new ChildNotFoundException("The user id"+id+" is not found"));	
+}
 //	public Patients findChildWithname(String name) {
 //		return childRepo.findChildByname(name).orElseThrow(()->new ChildNotFoundException("The child with"+name+" is not found"));
 //	}
@@ -49,11 +49,11 @@ public class PatientsService {
 		return childRepo.save(child);
 	}
 
-//	public void DeleteChild(Long id) {
-//		ChildRepo.deleteChildById(id);
-//	}
-public Patients isdeleted(boolean deleted) {
-	return childRepo.isdeleted(deleted).orElseThrow(()->new ChildNotFoundException("The child is not deleted"));
-}
+	public void DeleteChild(Long id) {
+		childRepo.DeleteChildById(id);
+	}
+//public Patients isdeleted(boolean deleted) {
+//	return childRepo.isdeleted(deleted).orElseThrow(()->new ChildNotFoundException("The child is not deleted"));
+//}
 
 }

@@ -39,8 +39,8 @@ public Cards findCardById(long id) {
 public Cards UpdateCard(Cards card) {
 return	cardRepo.save(card);
 }
-//public void DeleteCard(Long id) {
-//	CardRepo.deleteCardById(id);
-//}
+public void DeleteCard(Long id) {
+	cardRepo.deleteCardById(id);
+}
  
 }
