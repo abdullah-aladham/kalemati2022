@@ -19,6 +19,8 @@ public class Teacher {
 	private String major;//teacher major
 	@Column(nullable=false)
 	private String TeacherCode;
+	@Column(nullable=false)
+	private boolean isdeleted;
 //	@Column(nullable=false)
 //    private School school;
 	

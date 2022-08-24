@@ -24,7 +24,8 @@ public class Audit_log {
 	private String action_desc;
 //	private School customer;
 	
-	
+	@Column(nullable=false)
+	private boolean isdeleted;
 	public Long getId() {
 		return action_id;
 	}

@@ -13,13 +13,13 @@ import com.abdullah_aladham.kalemati.Repo.CardRepo;
 import com.abdullah_aladham.kalemati.Exceptions.*;
 
 
-//@Service
+@Service
 public class CardsService {
 	
 
 	private final CardRepo cardRepo;
 	
-	
+	@Autowired
 	public CardsService() {
 		this.cardRepo = null;}
 	public CardsService(CardRepo cardRepo) {

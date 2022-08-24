@@ -3,7 +3,7 @@ package com.abdullah_aladham.kalemati.Model;
 import jakarta.persistence.*;
 
 //import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
-@Entity
+//@Entity
 public class Card_Categories {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

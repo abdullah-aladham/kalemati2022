@@ -17,6 +17,8 @@ public class Requests {
 	protected Date request_date;
 	@Column(nullable=false)
 	protected String requestCode;
+	@Column(nullable=false)
+	private boolean isdeleted;
 //	@Column(nullable=false)
 //	protected School customer;
 //	@Column(nullable=false)

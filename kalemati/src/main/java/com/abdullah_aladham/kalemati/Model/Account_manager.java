@@ -10,4 +10,26 @@ public class Account_manager {
 	protected Long Id;
 	@Column(nullable=false)
 	protected String name;
+	@Column(nullable=false)
+	protected String Code;
+	@Column(nullable=false)
+	private boolean isdeleted;
+	public Long getId() {
+		return Id;
+	}
+	public void setId(Long id) {
+		Id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCode() {
+		return Code;
+	}
+	public void setCode(String code) {
+		this.Code = code;
+	}
 }

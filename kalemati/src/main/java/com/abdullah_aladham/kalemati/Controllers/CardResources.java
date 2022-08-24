@@ -17,7 +17,8 @@ import com.abdullah_aladham.kalemati.Services.RequestService;
 @RequestMapping("/card")
 public class CardResources {
 	private final CardsService cardsService;
-
+public CardResources(){
+	this.cardsService = null;}
 	@Autowired
 	public CardResources(CardsService cardsService) {
 		this.cardsService = cardsService;

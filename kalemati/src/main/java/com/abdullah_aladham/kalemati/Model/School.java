@@ -29,6 +29,8 @@ public class School {
 //	private String Email;
 	@Column(nullable=false)
 	private String CustomerCode;
+	@Column(nullable=false)
+	private boolean isdeleted;
 //	@Column
 // Patients children;
 
