@@ -21,7 +21,8 @@ public class Cards {
 	protected String name1;
 	@Column(nullable=false)
 	private boolean isdeleted;
-//	protected CardCategories card_category;
+	//@Column(nullable=false)
+	//protected CardCategories card_category;
 //	private CardCategories categories;
 	//@Column 
 	//@OneToOne

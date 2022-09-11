@@ -32,12 +32,12 @@ public class AdminResources  {
 
 //	@Override
 //	@GetMapping("/all")
-
-//	public ResponseEntity<List<School>> getAllSchools() {
+//
+//	public ResponseEntity<List<Admin>> getAllAdmins() {
 //		// TODO Auto-generated method stub
-//		List<School> schools =adminService.findallSchools();
+//		List<Admin> schools =adminService.findallAdmins();
 //		return new ResponseEntity<>(schools, HttpStatus.OK);
-//	}
+////	}
 
 //	@Override
 //	@GetMapping("/sch-names")
