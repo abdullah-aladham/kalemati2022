@@ -51,14 +51,14 @@ public ResponseEntity<Patients> addChild(@RequestBody Patients child){
 }
 @PutMapping("/update")
 public ResponseEntity<Patients> updateChild(@RequestBody Patients child){
-	Patients updateChild =childService.UpdateChild(child);
+	Patients updateChild =childService.UpdatePatient(child);
 	return new ResponseEntity<>(updateChild,HttpStatus.OK);
 	
 }
-@DeleteMapping("/delete/{id}")
-public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
-	childService. DeleteChild(id);
-	return new ResponseEntity<>(HttpStatus.OK);
-	
-}
+//@DeleteMapping("/delete/{id}")
+//public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
+//	childService. DeletePatient(id);
+//	return new ResponseEntity<>(HttpStatus.OK);
+//	
+//}
 }

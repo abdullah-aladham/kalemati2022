@@ -52,11 +52,11 @@ public ResponseEntity<Requests> updateRequest(@RequestBody Requests req){
 	return new ResponseEntity<>(updatedReq,HttpStatus.CREATED);
 	
 }
-@DeleteMapping("/delete")
-public ResponseEntity<Requests>deleteTeacher(@PathVariable("id")Long id){
-	reqService.deleteReq(id);
-	return new ResponseEntity(HttpStatus.OK);
-}
+//@DeleteMapping("/delete")
+//public ResponseEntity<Requests>deleteTeacher(@PathVariable("id")Long id){
+//	reqService.deleteReq(id);
+//	return new ResponseEntity(HttpStatus.OK);
+//}
 
 
 }

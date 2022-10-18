@@ -12,7 +12,7 @@ import com.abdullah_aladham.kalemati.Repo.AccountManagerRepo;
 @Service
 public class AccountManagerServices  {
 	AccountManagerRepo accRepo;
-
+public	AccountManagerServices() {}
 	public AccountManagerServices(AccountManagerRepo accRepo) {
 		this.accRepo = accRepo;
 	}
@@ -30,7 +30,7 @@ public class AccountManagerServices  {
 		return accRepo.save(mgr);
 	}
 	public void deleteMgr(Long id) {
-		accRepo.deleteManager(id);
+		accRepo.deleteManagerById(id);
 	}
 
 	

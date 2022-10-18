@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 
 
 import com.abdullah_aladham.kalemati.Security.ApplicationUserRole;
-
+@Entity
 public class Audit_log {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

@@ -1,7 +1,7 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import jakarta.persistence.*;
-
+@Entity
 public class Teacher {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

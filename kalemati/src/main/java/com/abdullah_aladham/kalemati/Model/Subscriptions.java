@@ -1,13 +1,12 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import java.util.Date;
-
-
+import java.util.List;
 
 //import com.abdullah_aladham.Kalemati21.Model.School;
 
 import jakarta.persistence.*;
-
+@Entity
 public class Subscriptions {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -28,6 +27,9 @@ private Date sub_end;
 private String subtoken;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	@Column(nullable=false)
+	private boolean isStopped;
+	
 	
 	
 //boolean didend;
@@ -36,7 +38,9 @@ private String subtoken;
 //private School User;
 	@Column(nullable=false)
 private String Code;
-
+	@ManyToMany(targetEntity=Cards.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Cards")
+	private List<Patients>cards;
 Subscriptions(Long id ,String name,Date start,Date end,boolean deleted,String code){
 	this.id=id;
 	this.sub_name=name;

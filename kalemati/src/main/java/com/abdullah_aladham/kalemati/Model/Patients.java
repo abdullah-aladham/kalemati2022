@@ -1,11 +1,11 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import com.abdullah_aladham.kalemati.Enums.GenderEnum;
-
+import com.abdullah_aladham.kalemati.Model.School;
 import jakarta.persistence.*;
 
 //import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
-
+@Entity
 public class Patients {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -35,6 +35,10 @@ private String ChildCode;
 //	@ManyToMany
 //private	School school;
 //public Patients() {}
+	/*Relationships for patients*/
+	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="School_id",referencedColumnName="id")
+	private School patient_School;
 public Patients(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
 	this.id=id;
 	this.name=name;

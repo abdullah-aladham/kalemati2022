@@ -45,13 +45,13 @@ public class PatientsService {
 //	public Patients findChildWithIdNameAndLocation(String name,Long id ,String loc) {
 //		return childRepo.findChildByIdAndNameAndLocation(id,name, loc).orElseThrow(()->new ChildNotFoundException("The child with"+id+", "+name+" and "+loc+" is not found"));
 //	}
-	public Patients UpdateChild(Patients child) {
+	public Patients UpdatePatient(Patients child) {
 		return childRepo.save(child);
 	}
 
-	public void DeleteChild(Long id) {
-		childRepo.DeleteChildById(id);
-	}
+//	public void DeletePatient(Long id) {
+//		childRepo.DeletePatientById(id);
+//	}
 //public Patients isdeleted(boolean deleted) {
 //	return childRepo.isdeleted(deleted).orElseThrow(()->new ChildNotFoundException("The child is not deleted"));
 //}

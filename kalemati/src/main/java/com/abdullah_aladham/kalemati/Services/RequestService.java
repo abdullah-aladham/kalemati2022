@@ -36,8 +36,8 @@ public List<Requests> findRequstsById(Long id){
 public Requests updateRequest(Requests req) {
 	return reqRepo.save(req);
 }
-public void deleteReq(Long id) {
-	reqRepo.deleteRequest(id);
-}
+//public boolean deleteReq(Long id) {
+//return	reqRepo.deleteRequest(id);
+//}
 	
 }

@@ -14,6 +14,7 @@ public class Account_manager {
 	protected String Code;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	
 	public Long getId() {
 		return Id;
 	}
@@ -32,4 +33,11 @@ public class Account_manager {
 	public void setCode(String code) {
 		this.Code = code;
 	}
+	public boolean isIsdeleted() {
+		return isdeleted;
+	}
+	public void setIsdeleted(boolean isdeleted) {
+		this.isdeleted = isdeleted;
+	}
+	
 }

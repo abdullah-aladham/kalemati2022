@@ -5,7 +5,7 @@ import java.util.Date;
 import jakarta.persistence.*;
 
 
-
+@Entity
 public class Requests {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -19,6 +19,8 @@ public class Requests {
 	protected String requestCode;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	@Column(nullable=false)
+	private boolean isRejected;
 //	@Column(nullable=false)
 //	protected School customer;
 //	@Column(nullable=false)
@@ -26,6 +28,18 @@ public class Requests {
 	
 //	private School customer;
 
+	public boolean isIsdeleted() {
+		return isdeleted;
+	}
+	public void setIsdeleted(boolean isdeleted) {
+		this.isdeleted = isdeleted;
+	}
+	public boolean isRejected() {
+		return isRejected;
+	}
+	public void setRejected(boolean isRejected) {
+		this.isRejected = isRejected;
+	}
 	public Requests(Long id, String name, Date request_date, String requestCode,School customer) {
 		this.id = id;
 		this.name = name;

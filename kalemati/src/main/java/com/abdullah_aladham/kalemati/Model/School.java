@@ -9,16 +9,13 @@ import jakarta.persistence.*;
 
 
 
-//import com.abdullah_aladham.Kalemati21.Model.Patients;
-//import com.abdullah_aladham.Kalemati21.Model.Subscriptions;
-//import com.abdullah_aladham.Kalemati21.Model.Teacher;
-
+@Entity
 public class School {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(nullable=false ,updatable=false,name="school_id")
-	private Long id;
-	@Column(nullable=false,name="school_name")
+	@Column(nullable=false ,updatable=false)
+	private Long Id;
+	@Column(nullable=false)
 	private String SchoolName;
 //	@Column(nullable=false)
 //	private String Phonenumber;
@@ -56,7 +53,7 @@ public class School {
 	boolean isblocked;//checks if schools is blocked or not
 	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		
-		this.id=id;
+		this.Id=id;
 		this.SchoolName=schoolname;
 
 		
@@ -69,11 +66,11 @@ public class School {
 		
 	}
 public Long getId() {
-	return id;
+	return Id;
 	
 }
 public void setId(Long id) {
-	this.id=id;
+	this.Id=id;
 }
 //public String getName() {
 //	return Firstname.concat(last_name);
@@ -128,7 +125,7 @@ public void setCode(String newCode) {
 //}
 @Override
 public String toString() {
-	return "Customer "+"id="+id+","+"SchoolName"+SchoolName+", School Code:"+CustomerCode;
+	return "Customer "+"id="+Id+","+"SchoolName"+SchoolName+", School Code:"+CustomerCode;
 }
 //public Patients getChildren() {
 //	return children;
