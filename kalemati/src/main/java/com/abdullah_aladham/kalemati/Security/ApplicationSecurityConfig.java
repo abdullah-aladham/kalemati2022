@@ -12,47 +12,47 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-//@Configuration
-//@EnableWebSecurity
+@Configuration
+@EnableWebSecurity
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
-//	private final PasswordEncoder passwordEncoder;
-//	@Autowired
-//	public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
-//		this.passwordEncoder=passwordEncoder;
-//	}
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//		// TODO Auto-generated method stub
-//		http
-//			.authorizeRequests()
-//			.anyRequest()
-//			.authenticated()
-//			.and()
-//			.httpBasic();
-//	}
-//
-//	@Override
-//	@Bean
-//	protected UserDetailsService userDetailsService() {
-//		
-//		// TODO Auto-generated method stub
-//	UserDetails TestUser =User.builder()
-//	.username("Test")
-//	.password(passwordEncoder.encode("password"))
-//	.roles("CUSTOMER")
-//	.build();
-//	
-//	UserDetails Admin_Abdullah =User.builder()
-//	.username("Abdullah Aladham")
-//	.password(passwordEncoder.encode("password"))
-//	.roles("ADMIN")
-//	.build();
-//	return new InMemoryUserDetailsManager(
-//			TestUser,
-//			Admin_Abdullah
-//			);
-//	
-//	}
+	private final PasswordEncoder passwordEncoder;
+	@Autowired
+	public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
+		this.passwordEncoder=passwordEncoder;
+	}
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		// TODO Auto-generated method stub
+		http
+			.authorizeRequests()
+			.anyRequest()
+			.authenticated()
+			.and()
+			.httpBasic();
+	}
+
+	@Override
+	@Bean
+	protected UserDetailsService userDetailsService() {
+		
+		// TODO Auto-generated method stub
+	UserDetails TestUser =User.builder()
+	.username("Test")
+	.password(passwordEncoder.encode("password"))
+	.roles("CUSTOMER")
+	.build();
+	
+	UserDetails Admin_Abdullah =User.builder()
+	.username("Abdullah Aladham")
+	.password(passwordEncoder.encode("password"))
+	.roles("ADMIN")
+	.build();
+	return new InMemoryUserDetailsManager(
+			TestUser,
+			Admin_Abdullah
+			);
+	
+	}
 
 	
 }

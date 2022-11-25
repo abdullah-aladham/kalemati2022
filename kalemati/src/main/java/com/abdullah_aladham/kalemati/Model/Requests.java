@@ -21,6 +21,9 @@ public class Requests {
 	private boolean isdeleted;
 	@Column(nullable=false)
 	private boolean isRejected;
+	@ManyToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="School_id",referencedColumnName="Id")
+	private School school;
 //	@Column(nullable=false)
 //	protected School customer;
 //	@Column(nullable=false)

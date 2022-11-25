@@ -37,7 +37,7 @@ private String ChildCode;
 //public Patients() {}
 	/*Relationships for patients*/
 	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
-	@JoinColumn(name="School_id",referencedColumnName="id")
+	@JoinColumn(name="School_id",referencedColumnName="Id")
 	private School patient_School;
 public Patients(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
 	this.id=id;

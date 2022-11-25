@@ -31,6 +31,10 @@ public class School {
 	private String CustomerCode;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	
+//	@ManyToMany(targetEntity=Requests.class,cascade=CascadeType.ALL)
+//	@JoinColumn(name="Request_id",referencedColumnName="id")
+//	private Requests requests;
 //	@Column
 // Patients children;
 

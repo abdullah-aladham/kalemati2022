@@ -23,7 +23,9 @@ public class Teacher {
 	private boolean isdeleted;
 //	@Column(nullable=false)
 //    private School school;
-	
+	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="School_id",referencedColumnName="Id")
+	private School School;
 	
 	
 	public String getTeacherCode() {
