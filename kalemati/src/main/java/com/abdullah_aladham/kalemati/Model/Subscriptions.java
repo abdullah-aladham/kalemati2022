@@ -29,6 +29,8 @@ private String subtoken;
 	private boolean isdeleted;
 	@Column(nullable=false)
 	private boolean isStopped;
+	@Column(nullable=false)
+	private boolean isSuspended;
 	
 	
 	
@@ -41,13 +43,14 @@ private String Code;
 	@ManyToMany(targetEntity=Cards.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Cards")
 	private List<Patients>cards;
-Subscriptions(Long id ,String name,Date start,Date end,boolean deleted,String code){
+Subscriptions(Long id ,String name,Date start,Date end,boolean deleted,String code,boolean isSuspended){
 	this.id=id;
 	this.sub_name=name;
 	this.sub_start=start;
 	this.sub_end=end;
 	this.isdeleted=deleted;
 	this.Code=code;
+	this.isSuspended = isSuspended;
 //	this.User=uid;
 }
 public Subscriptions() {
@@ -83,6 +86,12 @@ public String getCode() {
 }
 public void SetCode(String NewCode) {
 	this.Code=NewCode;
+}
+public boolean isSuspended() {
+	return isSuspended;
+}
+public void setSuspended(boolean isSuspended) {
+	this.isSuspended = isSuspended;
 }
 
 }

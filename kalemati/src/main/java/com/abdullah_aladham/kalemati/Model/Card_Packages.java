@@ -1,26 +1,50 @@
 package com.abdullah_aladham.kalemati.Model;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 //import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
-//@Entity
-public class Card_Categories {
+@Entity
+public class Card_Packages {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
 	protected
-static Long Cat_id ;//category id
+static Long Pack_id ;
 	@Column(nullable=false)
 	protected String Name;
+	@ManyToMany(targetEntity=Cards.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Cards")
+	@Column(nullable=false)
+	protected List<Cards>pack_cards;
 //	@Column(nullable=false)
 //protected 	static CardCatEnum Categ_type;//type of category is chosen in frontend side and choices are put in the enum
-public 	Card_Categories(Long Cat_id,String type){
+public 	Card_Packages(Long pack_id,String type){
 ////	super(id, name, imagesrc, Cardcode);
-		this.Cat_id=Cat_id;
+		this.Pack_id=pack_id;
 		this.Name=type;
 	}
-public Card_Categories() {
+public Card_Packages() {
 	
+}
+public static Long getPack_id() {
+	return Pack_id;
+}
+public static void setPack_id(Long pack_id) {
+	Pack_id = pack_id;
+}
+public String getName() {
+	return Name;
+}
+public void setName(String name) {
+	Name = name;
+}
+public List<Cards> getPack_cards() {
+	return pack_cards;
+}
+public void setPack_cards(List<Cards> pack_cards) {
+	this.pack_cards = pack_cards;
 }
 
 	

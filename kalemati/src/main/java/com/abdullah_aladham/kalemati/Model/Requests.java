@@ -2,6 +2,8 @@ package com.abdullah_aladham.kalemati.Model;
 
 import java.util.Date;
 
+import com.abdullah_aladham.kalemati.Enums.ReqEnum;
+
 import jakarta.persistence.*;
 
 
@@ -24,6 +26,8 @@ public class Requests {
 	@ManyToOne(targetEntity=School.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="School_id",referencedColumnName="Id")
 	private School school;
+	@Column(nullable=false)
+	private ReqEnum request;
 //	@Column(nullable=false)
 //	protected School customer;
 //	@Column(nullable=false)

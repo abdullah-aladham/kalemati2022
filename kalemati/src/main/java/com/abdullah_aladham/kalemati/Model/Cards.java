@@ -17,8 +17,6 @@ public class Cards {
 	protected String imagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
-	@Column
-	protected String name1;
 	@Column(nullable=false)
 	private boolean isdeleted;
 	//@Column(nullable=false)

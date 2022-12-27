@@ -31,6 +31,8 @@ public class School {
 	private String CustomerCode;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	@Column(nullable=false)
+	protected boolean isBlocked;
 	
 //	@ManyToMany(targetEntity=Requests.class,cascade=CascadeType.ALL)
 //	@JoinColumn(name="Request_id",referencedColumnName="id")
@@ -55,6 +57,7 @@ public class School {
 	private List<Patients>patients;
 	@Column(nullable=false,name="is_blocked")
 	boolean isblocked;//checks if schools is blocked or not
+	
 	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		
 		this.Id=id;
