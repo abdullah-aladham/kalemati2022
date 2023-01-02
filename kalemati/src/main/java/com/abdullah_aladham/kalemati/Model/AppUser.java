@@ -1,4 +1,4 @@
-package com.abdullah_aladham.kalemati.Security;
+package com.abdullah_aladham.kalemati.Model;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -12,6 +12,8 @@ import java.util.Collections;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.abdullah_aladham.kalemati.Security.ApplicationUserRole;
 
 import jakarta.persistence.*;
 //import lombok.Getter;
@@ -34,6 +36,7 @@ public class AppUser implements UserDetails {
 	private String username;
 	private String email;
 	private String password;//user password :) 
+	@Enumerated(EnumType.STRING)
 	private ApplicationUserRole appUserRole ;// to give the user their role
 	private Boolean Locked;//to check if the account is locked
 	private Boolean enabled;//to check if the account is enabled

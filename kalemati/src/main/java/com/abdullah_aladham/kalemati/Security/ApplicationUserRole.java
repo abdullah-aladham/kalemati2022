@@ -5,7 +5,8 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 import com.abdullah_aladham.kalemati.Security.ApplicationUserPermission.*;
 public enum ApplicationUserRole {
-	CUSTOMER(Sets.newHashSet(ApplicationUserPermission.ADD_CHILD,
+//	Account_Manager(permissions),
+	School(Sets.newHashSet(ApplicationUserPermission.ADD_CHILD,
 			ApplicationUserPermission.SHOW_CHILD)
 			),
 	
