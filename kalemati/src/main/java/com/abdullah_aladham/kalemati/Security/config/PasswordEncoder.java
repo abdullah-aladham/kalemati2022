@@ -1,13 +1,16 @@
 package com.abdullah_aladham.kalemati.Security.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import lombok.AllArgsConstructor;
 
 @Configuration
-@AllArgsConstructor
-@EnableWebSecurity
-public class PasswordEncoder {
 
+public class PasswordEncoder {
+	
+	@Bean
+public BCryptPasswordEncoder bCryptPasswordEncoder() {
+	return new BCryptPasswordEncoder();
+}
 }
