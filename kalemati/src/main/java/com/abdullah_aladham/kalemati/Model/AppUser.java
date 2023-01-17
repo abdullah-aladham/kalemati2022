@@ -32,28 +32,24 @@ public class AppUser implements UserDetails {
 			strategy=GenerationType.SEQUENCE,
 			generator = "user_generator")
 	private Long id;
-	private  String name;
-	private String username;
+	private  String firstname;
+	private String lastName;
 	private String email;
 	private String password;//user password :) 
 	@Enumerated(EnumType.STRING)
 	private ApplicationUserRole appUserRole ;// to give the user their role
-	private Boolean Locked;//to check if the account is locked
-	private Boolean enabled;//to check if the account is enabled
+	
 	
 	public AppUser() {
 		
 	}
-	public AppUser(String name, String username, String email, String password, ApplicationUserRole appUserRole,
-			Boolean locked, Boolean enabled) {
+	public AppUser(String firstname, String lastName, String email, String password, ApplicationUserRole appUserRole) {
 	
-		this.name = name;
-		this.username = username;
+		this.firstname = firstname;
+		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.appUserRole = appUserRole;
-		Locked = locked;
-		this.enabled = enabled;
 	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -62,34 +58,57 @@ public class AppUser implements UserDetails {
 				new SimpleGrantedAuthority(appUserRole.name());//used for Storing a String representation of an authority granted to the Authentication object.
 		return Collections.singletonList(authority);//returns the result of the authority object in an immuteable list
 	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
 	@Override
 	public String getPassword() {
 		// returns the password
 		return password;
 	}
-	@Override
-	public String getUsername() {
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getlastName() {
 		// TODO Auto-generated method stub
-		return username;
+		return lastName;
 	}
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
 		return true;
 	}
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return !Locked;
-	}
+
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return email;
+	}
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return enabled;
+		return false;
 	}
 }

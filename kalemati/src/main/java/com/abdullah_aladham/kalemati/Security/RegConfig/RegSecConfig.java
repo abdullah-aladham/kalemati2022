@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 @Configuration
 @AllArgsConstructor
 @EnableWebSecurity
-public class RegSecConfig extends WebSecurityConfigurerAdapter{
+public class RegSecConfig {
 //
 //	@Override
 //	protected void configure(HttpSecurity http) throws Exception {

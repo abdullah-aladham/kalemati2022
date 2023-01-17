@@ -14,13 +14,13 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
-public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
+public class ApplicationSecurityConfig  {
 	private final PasswordEncoder passwordEncoder;
 	@Autowired
 	public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
 		this.passwordEncoder=passwordEncoder;
 	}
-	@Override
+	
 	protected void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
 		http
@@ -31,7 +31,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 			.httpBasic();
 	}
 
-	@Override
+	
 	@Bean
 	protected UserDetailsService userDetailsService() {
 		

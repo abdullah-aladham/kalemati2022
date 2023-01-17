@@ -20,16 +20,15 @@ public class WebSecurityConfig  {
 	
 	private final AppUserService appUserService;
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+
 	@Autowired
-	public WebSecurityConfig(AppUserService appUserService,PasswordEncoder passwordEncoder,BCryptPasswordEncoder bCryptPasswordEncoder){
+	public WebSecurityConfig(AppUserService appUserService,BCryptPasswordEncoder bCryptPasswordEncoder){
 		this.appUserService=appUserService;
 		this.bCryptPasswordEncoder=bCryptPasswordEncoder;
 	}
 	
-	public WebSecurityConfig(){
-		this.appUserService=null;
-		this.bCryptPasswordEncoder=null;
-	}
+	
 	
 	@Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

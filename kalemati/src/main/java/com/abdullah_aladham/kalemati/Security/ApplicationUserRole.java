@@ -6,6 +6,7 @@ import com.google.common.collect.Sets;
 import com.abdullah_aladham.kalemati.Security.ApplicationUserPermission.*;
 public enum ApplicationUserRole {
 //	Account_Manager(permissions),
+	USER(null),
 	School(Sets.newHashSet(ApplicationUserPermission.ADD_CHILD,
 			ApplicationUserPermission.SHOW_CHILD)
 			),

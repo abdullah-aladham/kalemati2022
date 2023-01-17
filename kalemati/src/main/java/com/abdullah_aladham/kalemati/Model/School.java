@@ -55,20 +55,17 @@ public class School {
 	@ManyToMany(targetEntity=Patients.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Patients")
 	private List<Patients>patients;
-	@Column(nullable=false,name="is_blocked")
-	boolean isblocked;//checks if schools is blocked or not
+//	@Column(nullable=false,name="isblocked")
+//	boolean isblocked;//checks if schools is blocked or not
 	
 	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		
 		this.Id=id;
 		this.SchoolName=schoolname;
-
-		
 		this.CustomerCode=Ccode;
-//		this.children=children;
-//		this.teachers=teachers;
-		this.isblocked=blocked;
+		this.isBlocked=blocked;
 	}
+	
 	public School() {
 		
 	}
@@ -79,57 +76,14 @@ public Long getId() {
 public void setId(Long id) {
 	this.Id=id;
 }
-//public String getName() {
-//	return Firstname.concat(last_name);
-//	
-//}
-//public void Setname(String Firstname,String Last_name) {
-//	this.Firstname=Firstname;
-//	this.last_name=Last_name;
-//}
-//public String get_phonenum() {
-//	return Phonenumber;
-//}
-//public void set_phonenumber(String phonenumber) {
-//	this.Phonenumber=phonenumber;
-//}
-///*public String getusername() {
-//	return Username;
-//}
-//public void setUsername(String Username) {
-//	this.Username=Username;
-//}*/
-//public String getEmail() {
-//	return Email;
-//}
-//public void setEmail(String Email) {
-//	this.Email=Email;
-//}
+
 public String getCode() {
 	return CustomerCode;
 }
 public void setCode(String newCode) {
 	this.CustomerCode=newCode;
 }
-//
-//public String getpass() {
-//	return password;
-//}
-//public void setpass(String newpass) {
-//	this.password=newpass;
-//}
-//public void setconfpass(String newpass) {
-//	this.cpass=newpass;
-//}
-//public String getconfpass() {
-//	return cpass;
-//}
-//public boolean ismatch(String pass,String cpass) {
-//	if(pass.equals(cpass) || cpass.equals(pass)) {
-//		return true;
-//	}
-//	else return false;
-//}
+
 @Override
 public String toString() {
 	return "Customer "+"id="+Id+","+"SchoolName"+SchoolName+", School Code:"+CustomerCode;
@@ -147,6 +101,14 @@ public String toString() {
 //	this.sub = sub;
 //}
 
+public boolean isBlocked() {
+	return isBlocked;
+}
+
+public void setBlocked(boolean isBlocked) {
+	this.isBlocked = isBlocked;
+}
+
 //public Set<Teacher> getTeachers() {
 //	return teachers;
 //}
@@ -159,11 +121,6 @@ public String toString() {
 //public void setTeachers(Set<Teacher> teachers) {
 //	this.teachers = teachers;
 //}
-public boolean isIsblocked() {
-	return isblocked;
-}
-public void setIsblocked(boolean isblocked) {
-	this.isblocked = isblocked;
-}
+
 
 }
