@@ -1,24 +1,35 @@
 package com.abdullah_aladham.kalemati.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+
+//import com.abdullah_aladham.kalemati.Enums.CardCatEnum;
+
+
+import jakarta.persistence.*;
 @Entity
 public class Cards {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
-	protected Long id;
+	protected Long Card_id;
 	@Column(nullable=false)
 	protected String name;
+//	@Column(nullable=false)
+//	protected CardCatEnum cardCategory;
 	@Column(nullable=false)
 	protected String imagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	//@OneToMany(mappedBy="card",cascade=CascadeType.ALL)
+//	@Column(nullable=false)
+//	private List<Cards> Package_Cards=new ArrayList<Cards>();
+//	@ManyToOne
+//	@JoinColumn(name="Category_id")
+//	protected CardPackages categories;
+	
 	//@Column(nullable=false)
 	//protected CardCategories card_category;
 //	private CardCategories categories;
@@ -41,18 +52,18 @@ public class Cards {
 		
 	}
 	public Cards(Long id, String name, String imagesrc, String cardcode) {
-		this.id = id;
+		this.Card_id = id;
 		this.name = name;
 		this.imagesrc = imagesrc;
 		Cardcode = cardcode;
 	}
 public Long getId() {
-return id;
+return Card_id;
 
 }
 
 public void setId(Long id) {
-this.id=id;
+this.Card_id=id;
 }
 public String getName() {
 return name;
@@ -79,6 +90,13 @@ public String getCode() {
 
 @Override
 public String toString() {
-return "cards {}"+"id="+id +", name="+name+" , first image"+imagesrc +","+", CardCode"+Cardcode;
+return "cards {}"+"id="+Card_id +", name="+name+" , first image"+imagesrc +","+", CardCode"+Cardcode;
 }
+//public List<Cards> getPackage_Cards() {
+//	return Package_Cards;
+//}
+//public void setPackage_Cards(List<Cards> package_Cards) {
+//	Package_Cards = package_Cards;
+//}
+
 }

@@ -22,7 +22,7 @@ import lombok.*;
 @Getter
 @Setter
 @EqualsAndHashCode
-@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class AppUser implements UserDetails {
 	@Id
@@ -35,7 +35,11 @@ public class AppUser implements UserDetails {
 	private  String firstname;
 	private String lastName;
 	private String email;
-	private String password;//user password :) 
+	private String password;//user password :)
+	//@Column
+	private boolean locked=false;
+	private boolean enabled=false;
+
 	@Enumerated(EnumType.STRING)
 	private ApplicationUserRole appUserRole ;// to give the user their role
 	
@@ -50,6 +54,8 @@ public class AppUser implements UserDetails {
 		this.email = email;
 		this.password = password;
 		this.appUserRole = appUserRole;
+		this.locked=locked;
+		this.enabled=enabled;
 	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -110,5 +116,41 @@ public class AppUser implements UserDetails {
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public boolean isLocked() {
+		return locked;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public ApplicationUserRole getAppUserRole() {
+		return appUserRole;
+	}
+
+	public void setAppUserRole(ApplicationUserRole appUserRole) {
+		this.appUserRole = appUserRole;
 	}
 }

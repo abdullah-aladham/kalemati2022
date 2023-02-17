@@ -9,7 +9,7 @@ import com.abdullah_aladham.kalemati.Services.AppUserService;
 
 import lombok.AllArgsConstructor; 
 @Service 
-@AllArgsConstructor
+
 public class RegisterationService {
 	private final EmailValidator emailValidator;
 	private final AppUserService appUserService;

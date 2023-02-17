@@ -40,10 +40,8 @@ private String subtoken;
 //private School User;
 	@Column(nullable=false)
 private String Code;
-	@ManyToMany(targetEntity=Cards.class,cascade=CascadeType.ALL)
-	@JoinColumn(name="Cards")
-	private List<Patients>cards;
-Subscriptions(Long id ,String name,Date start,Date end,boolean deleted,String code,boolean isSuspended){
+
+public Subscriptions(Long id ,String name,Date start,Date end,boolean deleted,String code,boolean isSuspended){
 	this.id=id;
 	this.sub_name=name;
 	this.sub_start=start;
