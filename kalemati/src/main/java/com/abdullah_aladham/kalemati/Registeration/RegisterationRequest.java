@@ -19,17 +19,7 @@ public class RegisterationRequest {
 	private String cpass;
 	private String Email;
 	
-	RegisterationRequest(){
-		
-	}//Empty constructor for some needs
-	RegisterationRequest(String Fname,String Lname, String Phone,String username,String pass,String Cpass,String email){
-		this.Firstname=Fname;
-		this.last_name=Lname;
-		this.Phonenumber=Phone;
-		this.password=pass;
-		this.cpass=Cpass;
-		this.Email=email;
-	}
+
 	
 	//Getters 
 	public String getFirstName() {

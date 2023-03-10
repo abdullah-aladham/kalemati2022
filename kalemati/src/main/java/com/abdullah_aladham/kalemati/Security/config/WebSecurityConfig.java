@@ -22,13 +22,7 @@ public class WebSecurityConfig  {
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 
-	@Autowired
-	public WebSecurityConfig(AppUserService appUserService,BCryptPasswordEncoder bCryptPasswordEncoder){
-		this.appUserService=appUserService;
-		this.bCryptPasswordEncoder=bCryptPasswordEncoder;
-	}
-	
-	
+
 	
 	@Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

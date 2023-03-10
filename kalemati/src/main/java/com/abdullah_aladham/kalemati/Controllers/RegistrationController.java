@@ -17,13 +17,8 @@ import lombok.AllArgsConstructor;
 public class RegistrationController {
 	private final RegisterationService registerationService;
 	
-	@Autowired
-public	RegistrationController(){
-		registerationService=null;
-	}
-	public RegistrationController(RegisterationService registerationService) {
-		this.registerationService=registerationService;
-	}
+
+
 	public String register(@RequestBody RegisterationRequest req) {
 		return registerationService.register(req);
 				
