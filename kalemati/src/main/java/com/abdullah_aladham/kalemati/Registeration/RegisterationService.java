@@ -36,8 +36,8 @@ public class RegisterationService {
 				.getToken(token)
 				.orElseThrow(()->
 						new IllegalStateException("token not found"));
-		if(ConfirmationToken.getConfirmedAt() !=null){
+		if(confirmationToken.getConfirmedAt() !=null){
 			throw new IllegalStateException("email already confirmed");
 		}
-	}
+
 }

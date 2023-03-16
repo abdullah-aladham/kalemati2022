@@ -79,7 +79,7 @@ public class ConfirmationToken {
         ExpiresAt = expiresAt;
     }
 
-    public LocalDateTime getConfirmedAt() {
+    public   LocalDateTime getConfirmedAt() {
         return ConfirmedAt;
     }
 
@@ -94,4 +94,5 @@ public class ConfirmationToken {
     public void setAppuser(AppUser appuser) {
         this.appuser = appuser;
     }
+
 }
