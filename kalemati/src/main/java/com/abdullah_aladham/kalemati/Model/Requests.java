@@ -1,6 +1,7 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import java.util.Date;
+import java.util.List;
 
 import com.abdullah_aladham.kalemati.Enums.ReqEnum;
 
@@ -33,6 +34,9 @@ public class Requests {
 	@OneToOne(targetEntity=Subscriptions.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Subscriptions_id",referencedColumnName="id")
 	private Subscriptions subscriptions;
+	@OneToMany(targetEntity=CardPackages.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="CardPackagesId")
+	private List<CardPackages> cardPackages;
 
 //	@Column(nullable=false)
 //	protected School customer;

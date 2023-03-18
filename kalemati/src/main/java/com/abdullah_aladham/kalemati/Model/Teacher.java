@@ -1,10 +1,12 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
 public class Teacher {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -43,15 +45,7 @@ public class Teacher {
 	public Teacher() {
 		
 	}
-	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major) {
-		this.id = id;
-		this.name = name;
-		this.phoneNo = phoneNo;
-		this.desciption = desciption;
-		this.email = email;
-		this.major = major;
-//		this.school=schools;
-	}
+
 
 
 

@@ -15,9 +15,15 @@ public class CardPackages {
 	private Long Id;
 	@Column(nullable=false)
 	private String Name;
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(targetEntity= Cards.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Cards_Id",referencedColumnName = "id")
 	private List<Cards> cards;
-	
+	@ManyToOne(targetEntity=Subscriptions.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Subscriptions_id",referencedColumnName="Id")
+	private Subscriptions subscriptions;
+	@ManyToOne(targetEntity=Requests.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Requests_id",referencedColumnName="Id")
+	private Requests Requested_Card_Packages;
 	
 	
 	

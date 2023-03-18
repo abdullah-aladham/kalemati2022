@@ -29,7 +29,8 @@ public class Cards {
 	@Column(nullable=false)
 
 	private boolean isdeleted;
-@ManyToOne
+	@ManyToOne(targetEntity=CardPackages.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="CardPackages_Id",referencedColumnName="Id")
 	private CardPackages cardPackages;
 	//@OneToMany(mappedBy="card",cascade=CascadeType.ALL)
 //	@Column(nullable=false)

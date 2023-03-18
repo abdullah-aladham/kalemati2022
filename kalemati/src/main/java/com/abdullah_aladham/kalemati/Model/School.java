@@ -56,22 +56,13 @@ public class School {
 	@JoinColumn(name="Principal_id",referencedColumnName="id")
 	private Account_manager Principal;
 	@OneToMany(targetEntity=Patients.class,cascade=CascadeType.ALL)
-	@JoinColumn(name="Patients")
+	@JoinColumn(name="Patients_Id",referencedColumnName = "id")
 	private List<Patients>patients;
+
 //	@Column(nullable=false,name="isblocked")
 //	boolean isblocked;//checks if schools is blocked or not
 	
-	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
-		
-		this.Id=id;
-		this.SchoolName=schoolname;
-		this.CustomerCode=Ccode;
-		this.isBlocked=blocked;
-	}
-	
-	public School() {
-		
-	}
+
 public Long getId() {
 	return Id;
 	

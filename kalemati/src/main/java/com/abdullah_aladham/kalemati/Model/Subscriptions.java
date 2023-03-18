@@ -34,8 +34,10 @@ private String subtoken;
 	@OneToOne(targetEntity=Requests.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Request_id",referencedColumnName="id")
 	private Requests request;
-	
-	
+
+	@OneToMany(targetEntity=CardPackages.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="CardPackagesId")
+	private List<CardPackages>cardPackages;
 //boolean didend;
 //	@Column(nullable=false)
 
