@@ -1,6 +1,9 @@
 package com.abdullah_aladham.kalemati.Model;
 
 import jakarta.persistence.*;
+
+import java.util.List;
+
 @Entity
 public class Teacher {
 	@Id
@@ -26,7 +29,10 @@ public class Teacher {
 	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="School_id",referencedColumnName="Id")
 	private School School;
-	
+	@ManyToMany(targetEntity=Patients.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Patient_id",referencedColumnName="id")
+	private List<Patients> patients;
+
 	
 	public String getTeacherCode() {
 		return TeacherCode;

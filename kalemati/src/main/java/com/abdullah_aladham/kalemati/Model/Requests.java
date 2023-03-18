@@ -5,9 +5,11 @@ import java.util.Date;
 import com.abdullah_aladham.kalemati.Enums.ReqEnum;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 
 
 @Entity
+@AllArgsConstructor
 public class Requests {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -51,15 +53,7 @@ public class Requests {
 	public void setRejected(boolean isRejected) {
 		this.isRejected = isRejected;
 	}
-	public Requests(Long id, String name, Date request_date, String requestCode,School customer) {
-		this.id = id;
-		this.name = name;
-		this.request_date = request_date;
-		this.requestCode = requestCode;
-//		this.customer=customer;
-	}
-	public Requests() {
-	}
+
 	public String getRequestCode() {
 		return requestCode;
 	}

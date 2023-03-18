@@ -3,6 +3,7 @@ package com.abdullah_aladham.kalemati.Model;
 import java.util.List;
 import java.util.Set;
 
+import lombok.AllArgsConstructor;
 import org.hibernate.annotations.Cascade;
 
 import jakarta.persistence.*;
@@ -10,6 +11,8 @@ import jakarta.persistence.*;
 
 
 @Entity
+@AllArgsConstructor
+
 public class School {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
