@@ -15,8 +15,8 @@ public class CardPackages {
 	private Long Id;
 	@Column(nullable=false)
 	private String Name;
-//	@OneToMany(cascade=CascadeType.ALL)
-//	private List<Cards> cards;
+	@OneToMany(cascade=CascadeType.ALL)
+	private List<Cards> cards;
 	
 	
 	

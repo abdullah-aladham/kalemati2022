@@ -31,7 +31,9 @@ private String subtoken;
 	private boolean isStopped;
 	@Column(nullable=false)
 	private boolean isSuspended;
-	
+	@OneToOne(targetEntity=Requests.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Request_id",referencedColumnName="id")
+	private Requests request;
 	
 	
 //boolean didend;

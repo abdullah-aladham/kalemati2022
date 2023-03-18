@@ -46,13 +46,13 @@ public class School {
 //	Set<cards> card;//i don't know really if school should be connected to cards immediately
 //	@Column(nullable=false)
 //	Set<Teacher> teachers=new HashSet();
-	@ManyToMany(targetEntity=Teacher.class,cascade=CascadeType.ALL)
+	@ManyToOne(targetEntity=Teacher.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Teacher_Id")
-	private List<Teacher>Sc_teachers;
+	private List<Teacher>teachers;
 	@OneToOne(targetEntity=Account_manager.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Principal_id",referencedColumnName="id")
 	private Account_manager Principal;
-	@ManyToMany(targetEntity=Patients.class,cascade=CascadeType.ALL)
+	@OneToMany(targetEntity=Patients.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Patients")
 	private List<Patients>patients;
 //	@Column(nullable=false,name="isblocked")

@@ -2,6 +2,8 @@ package com.abdullah_aladham.kalemati.Model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Account_manager {
 	@Id
@@ -14,6 +16,10 @@ public class Account_manager {
 	protected String Code;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	@ManyToOne
+	private List<Teacher> teachers;
+	@OneToOne
+	private School school;
 	
 	public Long getId() {
 		return Id;

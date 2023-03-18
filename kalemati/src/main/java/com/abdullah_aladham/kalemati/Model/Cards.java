@@ -18,11 +18,19 @@ public class Cards {
 //	@Column(nullable=false)
 //	protected CardCatEnum cardCategory;
 	@Column(nullable=false)
-	protected String imagesrc;
+	protected String Firstimagesrc;
+
+
+
+	@Column(nullable=false)
+	protected String Secondimagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
 	@Column(nullable=false)
+
 	private boolean isdeleted;
+@ManyToOne
+	private CardPackages cardPackages;
 	//@OneToMany(mappedBy="card",cascade=CascadeType.ALL)
 //	@Column(nullable=false)
 //	private List<Cards> Package_Cards=new ArrayList<Cards>();
@@ -51,10 +59,11 @@ public class Cards {
 	public Cards() {
 		
 	}
-	public Cards(Long id, String name, String imagesrc, String cardcode) {
+	public Cards(Long id, String name, String imagesrc,String Imagesrc2, String cardcode) {
 		this.Card_id = id;
 		this.name = name;
-		this.imagesrc = imagesrc;
+		this.Firstimagesrc = imagesrc;
+		this.Secondimagesrc=Imagesrc2;
 		Cardcode = cardcode;
 	}
 public Long getId() {
@@ -72,11 +81,11 @@ return name;
 public void Setname(String newname) {
 this.name=newname;
 }
-public String getsrc() {
-return imagesrc ;
+public String GetFirstImage() {
+return Firstimagesrc ;
 }
-public void setsrc(String newsrc) {
-	this.imagesrc=newsrc;
+public void SetFirstImage(String newsrc) {
+	this.Firstimagesrc=newsrc;
 }
 
 
@@ -90,8 +99,15 @@ public String getCode() {
 
 @Override
 public String toString() {
-return "cards {}"+"id="+Card_id +", name="+name+" , first image"+imagesrc +","+", CardCode"+Cardcode;
+return "cards {}"+"id="+Card_id +", name="+name+" , first image"+Firstimagesrc +","+"Second image"+Secondimagesrc+", CardCode"+Cardcode;
 }
+	public String getSecondimagesrc() {
+		return Secondimagesrc;
+	}
+
+	public void setSecondimagesrc(String secondimagesrc) {
+		Secondimagesrc = secondimagesrc;
+	}
 //public List<Cards> getPackage_Cards() {
 //	return Package_Cards;
 //}

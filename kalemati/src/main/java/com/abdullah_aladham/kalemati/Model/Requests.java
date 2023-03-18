@@ -28,6 +28,10 @@ public class Requests {
 	private School school;
 	@Column(nullable=false)
 	private ReqEnum request;
+	@OneToOne(targetEntity=Subscriptions.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Subscriptions_id",referencedColumnName="id")
+	private Subscriptions subscriptions;
+
 //	@Column(nullable=false)
 //	protected School customer;
 //	@Column(nullable=false)

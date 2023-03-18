@@ -4,6 +4,8 @@ import com.abdullah_aladham.kalemati.Enums.GenderEnum;
 import com.abdullah_aladham.kalemati.Model.School;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 //import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
 @Entity
 public class Patients {
@@ -25,10 +27,11 @@ private String ChildCode;
 	private double exam_result;
 	@Column(nullable=false)
 	private boolean isdeleted;
-//	@Column(nullable=false)
+
+//	@ManyToOne
 //	private School school;
-//	@Column(nullable=false)
-//	private Teacher teacher;
+//	@ ManyToMany
+//	List<Teacher> teachers;
 	
 //	private School school;
 //	Set<Teacher>teachers=new HashSet();
@@ -36,7 +39,7 @@ private String ChildCode;
 //private	School school;
 //public Patients() {}
 	/*Relationships for patients*/
-	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@ManyToOne(targetEntity=School.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="School_id",referencedColumnName="Id")
 	private School patient_School;
 public Patients(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
