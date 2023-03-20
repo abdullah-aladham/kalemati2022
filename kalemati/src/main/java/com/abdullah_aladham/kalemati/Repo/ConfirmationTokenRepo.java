@@ -8,7 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.DateTimeException;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Optional;
 
 @Repository
@@ -18,9 +20,8 @@ public interface ConfirmationTokenRepo
     Optional<ConfirmationToken> findByToken(String Token);
     @Transactional
     @Modifying
-    @Query("UPDATE ConfirmationToken c " +
-            "SET c.confirmedAt = ?2 " +
-            "WHERE c.token = ?1")
-    int updateConfirmedAt(String token,
-                          LocalDateTime confirmedAt);
+////    @Query("UPDATE ConfirmationToken c " +
+////            "SET c.confirmedAt = ?2 " +
+////            "WHERE c.token = ?1")
+   int updateConfirmedAt(String token,LocalDateTime confirmedAt);
 }

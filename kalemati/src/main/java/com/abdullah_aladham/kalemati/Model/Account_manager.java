@@ -16,9 +16,11 @@ public class Account_manager {
 	protected String Code;
 	@Column(nullable=false)
 	private boolean isdeleted;
-	@ManyToOne
+	@ManyToOne(targetEntity=Teacher.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="Teacher_id",referencedColumnName="Id")
 	private List<Teacher> teachers;
-	@OneToOne
+	@OneToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="School_id",referencedColumnName="Id")
 	private School school;
 	
 	public Long getId() {
