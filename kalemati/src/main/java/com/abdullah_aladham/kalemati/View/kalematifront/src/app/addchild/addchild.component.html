@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add child</ion-title>
+    <meta charset="utf-8">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-header>
+
+  </ion-header>
+  <ion-form>
+    <div id="error"></div>
+    <ion-item>
+      <ion-label position="floating">Child name</ion-label>
+      <ion-input type="text" [(NgModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" [(NgModel)]="gender">Gender</ion-label>
+      <ion-select>
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" [(NgModel)]="age">Child age</ion-label>
+      <ion-input type="number" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="addchild()">add child</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="cancel()">cancel</ion-button>
+    </ion-item>
+  </ion-form>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-form [formGroup]="loginform">
+    <ion-item>
+      <ion-label position="floating">email</ion-label>
+      <ion-input type="text" [(ngModel)]="Email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Password
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button (click)="login()">login</ion-button>
+    <a href="forgotpass">forgot pass</a>
+    <ion-item>
+      <ion-checkbox color="primary" value="remeber me">Remember me</ion-checkbox>
+    </ion-item>
+
+  </ion-form>
+</ion-content>

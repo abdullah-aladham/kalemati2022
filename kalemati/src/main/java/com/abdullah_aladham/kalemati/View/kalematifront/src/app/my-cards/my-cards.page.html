@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" (click)="back()"></ion-icon>
+
+    <ion-title>my cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col>
+      <ion-row>
+        <ion-card (click)="getPhotoUrl(imagesrc)">
+          <ion-card-content>القائمة الاولى</ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+</ion-content>

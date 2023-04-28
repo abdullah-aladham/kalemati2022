@@ -1,0 +1,99 @@
+<ion-header>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>-->
+  <!--<script src="validation.js"></script>-->
+  <!--<script src="signup-validation.js"></script>-->
+  <!--<script src=" validation.js">
+  </script>-->
+
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-form>
+      <ion-item>
+        <ion-label position="floating">First name</ion-label>
+        <span id="fname"></span>
+        <ion-input [(ngModel)]="firstname" name="firstname" id="firstname">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Last name </ion-label><span id="lname"></span>
+        <ion-input [(ngModel)]="lastname" name="lastname" id="lastname">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Username
+
+        </ion-label><span id="uname"></span>
+        <ion-input [(ngModel)]="username" name=" username" id="username">
+        </ion-input>
+
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">
+          Email
+
+        </ion-label><span id="mailerr"></span>
+        <ion-input type="Email" [(ngModel)]="Email" name="email" id="email">
+        </ion-input>
+
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">
+          Password
+
+        </ion-label><span id="pass"></span>
+        <ion-input type="password" [(ngModel)]="password" name="password" id="password">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Confirm Password
+        </ion-label><span id="conf"></span>
+        <ion-input type="Password" [(ngModel)]="confirmpass" name="confirmpass" id="confirmpass">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input type="text" [(ngModel)]="tel" name="tel" id="tel"></ion-input>
+
+
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="floating" color="primary">Credit Card Number </ion-label>
+        <ion-input type="number" [(ngModel)]="credit"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="Signup()">Sign up</ion-button>
+      </ion-item>-->
+      <ion-item>
+        <ion-button (click)="register()">register</ion-button>
+      </ion-item>
+    </ion-form>
+  </ion-grid>
+
+
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullinIcon="chevron-down-circle-outline" pullingText="pull to refresh"
+      refreshingSpinner="circles" refreshingText="refreshing"></ion-refresher-content>
+  </ion-refresher>
+-->
+
+</ion-content>
