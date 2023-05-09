@@ -3,6 +3,7 @@ import React from 'react';
 //import kalemati from './kalemati';
 import Recomended from './recomended';
 import Kalemati from './kalemati';
+import Aboutus from './aboutus';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <> 
     
     <h1 style={{textAlign: 'center',color: '#F6B968'}}>Kalemati | كـلماتي</h1>
+    <Aboutus />
        <h2  style={{textAlign: 'center',color: '#F6B968'}}>My Packages</h2>
        <Kalemati />
        <h2 style={{textAlign: 'center',color: '#F6B968'}}>Recomended Packages</h2>

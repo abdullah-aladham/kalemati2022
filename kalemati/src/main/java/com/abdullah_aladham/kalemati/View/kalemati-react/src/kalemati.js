@@ -1,8 +1,9 @@
 import React from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+
   const Kalemati = () =>{
     const responsive = {
       superLargeDesktop: {
@@ -30,13 +31,53 @@ import Card from 'react-bootstrap/Card';
             <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
             <Card.Body>
               <Card.Title>
+                Package1
               </Card.Title>
+              <Card.Text>
+          Package details
+        </Card.Text>
+        <Button variant="primary">More Details</Button>
 
             </Card.Body>
           </Card>
-          <div>Item 2</div>
-          <div>Item 3</div>
-          <div>See More</div>
+          <Card>
+            <Card.Img variant="top" src="logo.svg" ></Card.Img>
+            <Card.Body>
+              <Card.Title>
+                Package2
+              </Card.Title>
+              <Card.Text>
+          Package details
+        </Card.Text>
+        <Button variant="primary">More Details</Button>
+
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
+            <Card.Body>
+              <Card.Title>
+                Package3
+              </Card.Title>
+              <Card.Text>
+          Package details
+        </Card.Text>
+        <Button variant="primary">More Details</Button>
+
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
+            <Card.Body>
+              <Card.Title>
+                See more
+              </Card.Title>
+              <Card.Text>
+          Package details
+        </Card.Text>
+
+            </Card.Body>
+          </Card>
         </Carousel>
       );
    
