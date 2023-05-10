@@ -28,7 +28,7 @@ const Recomended = () => {
       
       <Carousel responsive={responsive}>
         <Card>
-          <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
+          <Card.Img variant="top" src="https://scontent.fjrs29-1.fna.fbcdn.net/v/t1.6435-9/146184312_237476974759366_3667864136352351994_n.png?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6g1zpltn-BMAX-X7CWv&_nc_ht=scontent.fjrs29-1.fna&oh=00_AfC6EFOG1_hG6yZWOX0EniSQdZlGDflDOUgVrZhzbmvgQw&oe=64837200" ></Card.Img>
           <Card.Body>
             <Card.Title>
               Package1
@@ -41,7 +41,7 @@ const Recomended = () => {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="logo.svg" ></Card.Img>
+          <Card.Img variant="top" src="https://scontent.fjrs29-1.fna.fbcdn.net/v/t1.6435-9/146184312_237476974759366_3667864136352351994_n.png?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6g1zpltn-BMAX-X7CWv&_nc_ht=scontent.fjrs29-1.fna&oh=00_AfC6EFOG1_hG6yZWOX0EniSQdZlGDflDOUgVrZhzbmvgQw&oe=64837200" ></Card.Img>
           <Card.Body>
             <Card.Title>
               Package2
@@ -54,7 +54,7 @@ const Recomended = () => {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
+          <Card.Img variant="top" src="https://scontent.fjrs29-1.fna.fbcdn.net/v/t1.6435-9/146184312_237476974759366_3667864136352351994_n.png?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6g1zpltn-BMAX-X7CWv&_nc_ht=scontent.fjrs29-1.fna&oh=00_AfC6EFOG1_hG6yZWOX0EniSQdZlGDflDOUgVrZhzbmvgQw&oe=64837200" ></Card.Img>
           <Card.Body>
             <Card.Title>
               Package3
@@ -67,7 +67,6 @@ const Recomended = () => {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src="holder.js/100px180" ></Card.Img>
           <Card.Body>
             <Card.Title>
               See more
