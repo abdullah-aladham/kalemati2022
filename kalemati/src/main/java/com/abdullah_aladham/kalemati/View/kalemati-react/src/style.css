@@ -7,3 +7,25 @@ footer{
 .icons.in,a{
     margin: 10px;
 }
+.dropDownProfile{
+    position: absolute;
+    top:4.5rem;
+    right: 1.5rem;
+    width: 256px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f6b968;
+    border: 1px solid gray;
+}
+.dropDownProfile::before{
+    content: '';
+    position: absolute;
+    transform:rotate(270deg);
+    top:-0.9rem;
+    right: 0.1em;
+    width: 25px;
+    height: 25px;
+  border-left: 1px solid white;
+  border-top:1px solid white;
+
+}
