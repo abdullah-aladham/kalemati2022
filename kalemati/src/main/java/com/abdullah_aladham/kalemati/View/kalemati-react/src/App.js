@@ -11,12 +11,18 @@ import Footer from './footer';
 import DropdownProfile from './dropdown';
 import Contactus from './Contactus';
 import Sidebarmenu from './sidebarmenu/sidebarmenu';
+import { Routes,Route } from 'react-router';
+import KalematiPage from './Pages/KalematiPage';
 
 function App() {
 
   return (
     
     <> 
+  {/* <Routes>
+    {/* <Route path='/' element={<App/>}/> */}
+    {/* <Route path="./KalematiPage" element={<KalematiPage/>} /> */}
+  {/* </Routes> */} 
 <div className='container'>
 
  <div className="mb-2 position-absolute top-0 start-0"> 
@@ -37,6 +43,7 @@ function App() {
 
        <Contactus />
        <Footer />
+       
        </>
   );
   

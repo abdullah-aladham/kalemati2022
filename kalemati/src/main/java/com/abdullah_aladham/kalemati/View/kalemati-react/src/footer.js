@@ -11,6 +11,8 @@ import {
   import  * as icons  from 'react-bootstrap-icons';
   import "./style.css"
 import { Face } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+import KalematiPage from './Pages/KalematiPage';
 class Footer extends Component {
     render() {
         return (
@@ -24,13 +26,13 @@ class Footer extends Component {
                 </div>
                 <div className='col-sm-2'>
                     <h5>Navigation</h5>
-                    <p>  <a href=''>Home</a></p>
-                    <p>  <a href=''>Aboutus</a></p>
+                    <p>  <Link to='/'>Home</Link></p>
+                    <p>  <Link to='./Pages/KalematiPage'>Aboutus</Link></p>
                 </div>
 
                 <div className='col-sm-2'>
                     <h5>Services</h5>
-                    <p>  <a href=''>My Cards</a></p>
+                    <p>  <Link to='./Pages/KalematiPage'>My Cards</Link></p>
                     <p>  <a href=''>Recommended</a></p>
                 </div>
                 <div className='col-sm-2'>

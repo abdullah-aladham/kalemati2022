@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import "./sidebar.css";
 import * as Icon from "react-bootstrap-icons";
 import "bootstrap-icons/font/bootstrap-icons.css"
+import {Route ,Routes,Link} from "react-router-dom";
+import KalematiPage from '../Pages/KalematiPage';
+import { Style } from '@material-ui/icons';
 // import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 const Sidebarmenu = () => {
     // const [isExpended, setExpendState] =useState(false);
 let [navCollapse,setNavCollapse]=useState(false);
     return (
+        
         // <div className='side-nav-container'>
         //     <div className='nav-upper'>
         //         <div className='nav-heading'>
@@ -32,29 +36,41 @@ let [navCollapse,setNavCollapse]=useState(false);
 
         //         </ul>
         //     </nav>
+        <>
+        {/* <Routes> */}
+    {/* <Route path='/' element={<App/>}/> */}
+    {/* <Route path="../Pages/KalematiPage" element={<KalematiPage/>} />
+  </Routes> */}
             <div className='sidebar-content'>
+                
                 <i className='bi bi-justify' onClick={e=>setNavCollapse(!navCollapse)}></i>
-            <div className={`sidebar-container ${navCollapse ? "navCollapse":""}`}>
+            <nav className={`sidebar-container ${navCollapse ? "navCollapse":""}`}>
+            <div className='navbar-brand'>
+                  <Link to="/"> <img src={require('../images/kalemati-brand.png')} id="brand"/></Link>
+                    
+                </div>
                 <div className='nav-option option1'>
                     <Icon.HouseFill className='icon1'/>
                     <span>Homepage</span>
                 </div>
                 <div className='nav-option option1'>
                     <Icon.PersonCircle className='icon1'/>
-                    <span>My Profile</span>
+                    <Link to="#" className='link'>My Profile</Link>
                 </div>
                
                 <div className='nav-option option1'>
                     <Icon.CardImage className='icon1'/>
-                    <span>My Cards</span>
+                    <Link to="./Pages/KalematiPage" className='link'><i>My Cards</i></Link>
                 </div>
                 <div className='nav-option option1'>
                     <Icon.Heart className='icon1'/>
-                    <span>Recommended</span>
+                    <Link to="#" className='link'>Recommended</Link>
                 </div>
+            </nav>
             </div>
-            </div>
-        // </div>
+            
+       </>
+      
         );
 
 };
