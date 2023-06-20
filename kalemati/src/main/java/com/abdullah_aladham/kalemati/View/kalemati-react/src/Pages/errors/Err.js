@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./errstyle.css"
+import { useRouteError } from "react-router-dom";
+
 
 
 const Err =() =>{
+  const error = useRouteError();
+  console.error(error);
   return(
   <>
-    
-    <div className="d-flex align-items-center justify-content-center vh-100" id='err' >
-      <div id="center"><img src={require('../../images/kalemati-brand.png')} alt='kalemati brand' id="img"  /></div>
-    <p className="display-6 fw-bold text-white">Sorry,Looks like that the page your looking for is not found</p>
+<div id="error-page">
+      <h1>Oops!</h1>
+      <p>Sorry, an unexpected error has occurred.</p>
+      <p>
+        <i>{error.statusText || error.message}</i>
+      </p>
     </div>
     
     </>

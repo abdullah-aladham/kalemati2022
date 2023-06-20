@@ -8,7 +8,7 @@ import { Style } from '@material-ui/icons';
 // import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 const Sidebarmenu = () => {
     // const [isExpended, setExpendState] =useState(false);
-let [navCollapse,setNavCollapse]=useState(false);
+let [navCollapse,setNavCollapse]=useState(true);
     return (
         
         // <div className='side-nav-container'>
@@ -51,20 +51,21 @@ let [navCollapse,setNavCollapse]=useState(false);
                 </div>
                 <div className='nav-option option1'>
                     <Icon.HouseFill className='icon1'/>
-                    <span>Homepage</span>
+                    <Link to="/" className='link'> <span>Homepage</span></Link>
+
                 </div>
                 <div className='nav-option option1'>
-                    <Icon.PersonCircle className='icon1'/>
-                    <Link to="#" className='link'>My Profile</Link>
+                <Link to="./Pages/ProfilePage" className='link'><Icon.PersonCircle className='icon1'/></Link>
+                    <Link to="./Pages/ProfilePage" className='link'>My Profile</Link>
                 </div>
                
                 <div className='nav-option option1'>
-                    <Icon.CardImage className='icon1'/>
-                    <Link to="./Pages/KalematiPage" className='link'><i>My Cards</i></Link>
+                <Link to="../../Pages/KalematiPage" className='link'> <Icon.CardImage className='icon1'/></Link>
+                    <Link to="../../Pages/KalematiPage" className='link'><i>My Cards</i></Link>
                 </div>
                 <div className='nav-option option1'>
-                    <Icon.Heart className='icon1'/>
-                    <Link to="#" className='link'>Recommended</Link>
+                <Link  to={"./Pages/RecommendedPage"} > <Icon.Heart className='icon1'/></Link>
+                    <Link  to={"./Pages/RecommendedPage"} className='link'>Recommended</Link>
                 </div>
             </nav>
             </div>

@@ -178,7 +178,9 @@ span ,.icon1{
     color:#f6b968;
     font-size: 20px;
 }
-Link{
-    text-decoration: none;
+.link{
+    text-decoration: unset;
+    color:#f6b968;
+
 }
 

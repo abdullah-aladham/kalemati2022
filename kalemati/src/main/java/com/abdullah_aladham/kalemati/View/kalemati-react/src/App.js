@@ -5,14 +5,15 @@ import Recomended from './recomended';
 import Kalemati from './kalemati';
 import Aboutus from './aboutus';
 // import Sidebar from './Sidebar';
-import { Button, Dropdown } from 'react-bootstrap';
-import * as Icon from 'react-bootstrap-icons';
+// import { Button, Dropdown } from 'react-bootstrap';
+// import * as Icon from 'react-bootstrap-icons';
+// import Footer from './SharedElements/footer';
 import Footer from './footer';
-import DropdownProfile from './dropdown';
+// import DropdownProfile from './dropdown';
 import Contactus from './Contactus';
 import Sidebarmenu from './sidebarmenu/sidebarmenu';
-import { Routes,Route } from 'react-router';
-import KalematiPage from './Pages/KalematiPage';
+// import { Routes,Route } from 'react-router';
+// import KalematiPage from './Pages/KalematiPage';
 
 function App() {
 

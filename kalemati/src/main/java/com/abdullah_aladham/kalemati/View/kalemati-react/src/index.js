@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter} from "react-router-dom"
 import RecommendedPage from './Pages/RecommendedPage';
 import KalematiPage from './Pages/KalematiPage';
+import ProfilePage from'./Pages/ProfilePage';
+import PackageView from './Pages/PackageView';
 
 import {
   createBrowserRouter,
@@ -23,16 +25,25 @@ const router = createBrowserRouter([
     errorElement:<Err/>
   },
   {
-    path:"./Pages/KalematiPage",
-    element:<KalematiPage/>,
-    errorElement:<Err/>
+    path: "/Pages/KalematiPage",
+    element: <KalematiPage />,
+    errorElement: <Err />,
   }, 
   {
-    path: "./Pages/RecomendedPage",
-    element: <RecommendedPage/>,
-    errorElement:<Err/>
+    path: "/Pages/RecommendedPage",
+    element: <RecommendedPage />,
+    errorElement: <Err />,
   },
-  
+  {
+    path: "/Pages/ProfilePage",
+    element: <ProfilePage />,
+    errorElement: <Err />,
+  },
+ {
+   path: "/Pages/PackageView",
+    element: <PackageView />,
+    errorElement: <Err />,
+  }
 
   
 ]);

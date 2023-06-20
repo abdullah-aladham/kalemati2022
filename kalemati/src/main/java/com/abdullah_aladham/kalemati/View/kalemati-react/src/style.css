@@ -29,3 +29,11 @@ footer{
   border-top:1px solid white;
 
 }
+.Link{
+    text-decoration: none;
+    color: white;
+}
+.credits{
+    text-decoration:none;
+    
+}
