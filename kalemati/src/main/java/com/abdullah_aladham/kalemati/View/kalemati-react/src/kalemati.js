@@ -4,6 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
+import { Pause } from "react-bootstrap-icons";
 
   const Kalemati = () =>{
     const responsive = {
@@ -27,7 +28,7 @@ import { Link } from "react-router-dom";
     };
       return (
         
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} >
           <Card>
             <Card.Img variant="top" src={require("./images/sample.png")} ></Card.Img>
             <Card.Body>

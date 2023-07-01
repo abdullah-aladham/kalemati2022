@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
 import { MDBInput, MDBCheckbox, MDBBtn,MDBTextArea, MDBCardTitle } from 'mdb-react-ui-kit';
+import Footer from '../footer';
+import Header from '../SharedElements/Header';
+import Table from 'react-bootstrap/Table';
+import Kalemati from '../kalemati';
+
 
 class ClassRoom extends Component {
     render() {
         return (
             <>
-            <div>
-                
-            </div>
-            <div>
-            <form>
-<MdLabel style={{color:'#f6b968'}}>Add Patient</MdLabel>
-<MDBInput label ="Name" v-model='name' wrapperClass='mb-4'/>
-    <MDBSelect>
-        <MDBOption></MDBOption>
-    </MDBSelect>
-            </form>
-            </div>
+    <Header />
+    <Table striped bordered hover >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>john</td>
+                <td>M</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </Table>
+    <h2> Packages to use in class room</h2>
+    <Kalemati />
+    <Footer/>
             </>
         );
     }

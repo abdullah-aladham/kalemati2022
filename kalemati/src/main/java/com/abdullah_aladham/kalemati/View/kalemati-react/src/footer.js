@@ -34,6 +34,8 @@ class Footer extends Component {
                     <h5>Services</h5>
                     <p>  <Link to='./Pages/KalematiPage' className='Link'>My Cards</Link></p>
                     <p>  <a href='./Pages/RecomendedPage'className='Link'>Recommended</a></p>
+                    <p>  <a href='./ClassRoom'className='Link'>ClassRoom</a></p>
+
                 </div>
                 <div className='col-sm-2'>
                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">

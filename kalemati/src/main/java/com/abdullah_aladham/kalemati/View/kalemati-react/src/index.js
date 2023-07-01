@@ -10,6 +10,7 @@ import RecommendedPage from './Pages/RecommendedPage';
 import KalematiPage from './Pages/KalematiPage';
 import ProfilePage from'./Pages/ProfilePage';
 import PackageView from './Pages/PackageView';
+import ClassRoom from './Pages/ClassRoom';
 
 import {
   createBrowserRouter,
@@ -40,10 +41,15 @@ const router = createBrowserRouter([
     errorElement: <Err />,
   },
  {
-   path: "/Pages/PackageView",
+   path: "/Pages/PackageView/",
     element: <PackageView />,
     errorElement: <Err />,
-  }
+  },
+  {
+    path: "/Pages/ClassRoom/",
+     element: <ClassRoom />,
+     errorElement: <Err />,
+   }
 
   
 ]);
