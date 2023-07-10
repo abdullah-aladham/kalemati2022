@@ -25,7 +25,8 @@ private ContactUsServices contactUsServices;
         return new ResponseEntity<>(newReq,HttpStatus.CREATED);
 
     }
-    @PostMapping("/update")
+    //@PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<ContactUs> updateRequest(@RequestBody ContactUs contact){
         ContactUs updatedContact =contactUsServices.UpdateContactUs(contact);
         return new ResponseEntity<>(updatedContact,HttpStatus.CREATED);

@@ -17,6 +17,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Err from './Pages/errors/Err';
+import Login from "./Pages/UserMembership/Login";
+//import Login from './Pages/User-membership/login';
 // import KalematiPage from './Pages/KalematiPage';
 // import Recomended from './recomended';
 const router = createBrowserRouter([
@@ -49,7 +51,11 @@ const router = createBrowserRouter([
     path: "/Pages/ClassRoom/",
      element: <ClassRoom />,
      errorElement: <Err />,
-   }
+   },  {
+    path: "Pages/UserMembership/Login",
+     element: <Login />,
+     errorElement: <Err />,
+   },
 
   
 ]);
