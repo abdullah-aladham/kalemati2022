@@ -23,8 +23,11 @@ public class CardPackages {
 	private Subscriptions subscriptions;
 	@ManyToOne(targetEntity=Requests.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="Requests_id",referencedColumnName="Id")
-	private Requests Requested_Card_Packages;
-	
+	private Requests requestedCardPackages;
+	@ManyToOne(targetEntity=School.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="School_id",referencedColumnName="Id")
+	private School Customer;
+
 	
 	
 	

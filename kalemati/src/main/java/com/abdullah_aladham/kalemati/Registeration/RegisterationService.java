@@ -19,6 +19,13 @@ public class RegisterationService {
 	private final ConfirmationTokenService confirmationTokenService;
 
 
+	public RegisterationService(EmailValidator emailValidator, AppUserService appUserService,
+			ConfirmationTokenService confirmationTokenService) {
+		this.emailValidator = emailValidator;
+		this.appUserService = appUserService;
+		this.confirmationTokenService = confirmationTokenService;
+	}
+
 	public String register(RegisterationRequest request) {
 		// TODO Auto-generated method stub
 		boolean IsValidEmail = emailValidator.

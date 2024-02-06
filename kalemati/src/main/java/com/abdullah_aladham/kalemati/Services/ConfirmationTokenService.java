@@ -13,6 +13,9 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ConfirmationTokenService {
     private final ConfirmationTokenRepo confirmationTokenRepo;
+    public ConfirmationTokenService(ConfirmationTokenRepo confTokenRepo) {
+    	this.confirmationTokenRepo=confTokenRepo;
+    }
 
 public void saveConfirmationToken(ConfirmationToken Token){
 confirmationTokenRepo.save(Token);

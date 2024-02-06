@@ -42,5 +42,9 @@ return	cardRepo.save(card);
 public void DeleteCard(Long id) {
 	cardRepo.deleteCardById(id);
 }
+
+public void ShowCard(Long id){
+
+}
  
 }

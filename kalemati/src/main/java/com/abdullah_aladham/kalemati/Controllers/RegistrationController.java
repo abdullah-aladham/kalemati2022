@@ -19,6 +19,13 @@ public class RegistrationController {
 	
 
 
+	public RegistrationController(RegisterationService registerationService) {
+		
+		this.registerationService = registerationService;
+	}
+
+
+
 	public String register(@RequestBody RegisterationRequest req) {
 		return registerationService.register(req);
 				
